@@ -61,7 +61,8 @@ public class LoginServlet extends HttpServlet {
                         .append("</html>")
                         .append("<h2 style='color:red;'>")
                         .append("로그인안됌")
-                        .append("</h2>\n");
+                        .append("</h2>\n")
+                                .append("<a href=\"../index.jsp\">회원가입하러가기</a>");
 
                 out.println(responseText);
             }
