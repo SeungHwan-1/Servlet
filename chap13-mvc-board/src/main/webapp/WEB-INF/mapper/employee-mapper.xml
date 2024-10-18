@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="selectEmpById">
+        SELECT
+            EMP_ID,
+            EMP_NAME,
+            DEPT_CODE,
+            JOB_CODE,
+            SALARY
+        FROM EMPLOYEE
+        WHERE EMP_ID = ?
+    </entry>
+    <entry key="selectAll">
+        SELECT
+            *
+        FROM EMPLOYEE
+        WHERE ENT_YN = "N"
+    </entry>
+    <entry key="selectAll2">
+        SELECT
+        *
+        FROM BOARD
+    </entry>
+    <entry key="selectNewEmpId">
+        SELECT (MAX(EMP_ID)+1) AS EMP_ID
+        FROM EMPLOYEE;
+    </entry>
+    <entry key="insertbrd">
+        INSERT INTO BOARD
+        (
+            BOARD_TITLE, BOARD_CONTENT
+        )
+        VALUES(
+        ?,?
+        )
+    </entry>
+    <entry key="updateEmp">
+        UPDATE EMPLOYEE
+        SET ENT_YN = "Y", ENT_DATE = ?
+        WHERE EMP_ID = ?;
+
+    </entry>
+
+</properties>
