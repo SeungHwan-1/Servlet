@@ -22,7 +22,7 @@ public class JDBCTemplate {
             String driver = prop.getProperty("driver");
             String url = prop.getProperty("url");
             String user = prop.getProperty("user");
-            String password = prop.getProperty("password");
+            String password = prop.getProperty("password"); // config에서 가져와서 프롭스에 다넣음
 
             Class.forName(driver); // JDBC서블릿을 로드할거다 하고 쓴거
 
@@ -63,7 +63,7 @@ public class JDBCTemplate {
     //오토커밋을꺼놔서
     public static void commit(Connection con) {
         try {
-            if (con != null && con.isClosed()) {
+            if (con != null && !con.isClosed()) {
                 //널이아니고 isClosed가아니면 커밋을 할것
                 con.commit();
             }

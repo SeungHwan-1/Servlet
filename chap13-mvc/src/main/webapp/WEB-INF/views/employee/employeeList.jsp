@@ -40,7 +40,7 @@
             <th>${emp.bonus}</th>
             <th>${emp.managerId}</th>
             <th>${emp.hireDate}</th>
-            <th>${emp.enthate}</th>
+            <th>${emp.entDate}</th>
             <th>${emp.entYn}</th>
 
         </tr>

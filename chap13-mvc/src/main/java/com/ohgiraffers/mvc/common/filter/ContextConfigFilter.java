@@ -42,7 +42,7 @@ public class ContextConfigFilter implements Filter {
                     servletRequest.getServletContext().getInitParameter("mapper-location");
 
             ConfigLocation.MAPPER_LOCATION = root + "/" + mapperLocation;
-            System.out.println(ConfigLocation.MAPPER_LOCATION);
+            System.out.println("매퍼 설정 완료");
         }
         filterChain.doFilter(servletRequest, servletResponse);
     }

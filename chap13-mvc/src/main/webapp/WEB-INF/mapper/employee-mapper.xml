@@ -17,4 +17,28 @@
         FROM EMPLOYEE
         WHERE ENT_YN = "N"
     </entry>
+    <entry key="selectNewEmpId">
+        SELECT (MAX(EMP_ID)+1) AS EMP_ID
+        FROM EMPLOYEE;
+    </entry>
+    <entry key="insertEmp">
+        INSERT INTO EMPLOYEE
+        (
+            EMP_ID ,EMP_NAME, EMP_NO, EMAIL, PHONE,
+        DEPT_CODE, JOB_CODE, SAL_LEVEL ,SALARY, BONUS,
+        MANAGER_ID, HIRE_DATE, ENT_DATE, ENT_YN
+        )
+        VALUES(
+        ?,?,?,?,?,
+        ?,?,?,?,?,
+        ?,?,NULL,DEFAULT
+        )
+    </entry>
+    <entry key="updateEmp">
+        UPDATE EMPLOYEE
+        SET ENT_YN = "Y", ENT_DATE = ?
+        WHERE EMP_ID = ?;
+
+    </entry>
+
 </properties>

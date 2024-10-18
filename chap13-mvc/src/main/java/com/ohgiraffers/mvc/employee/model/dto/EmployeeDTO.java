@@ -1,6 +1,6 @@
 package com.ohgiraffers.mvc.employee.model.dto;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class EmployeeDTO {
 
